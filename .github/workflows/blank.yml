@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>+1 Button</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #number {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #plus-one-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+    }
+    #plus-one-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <h1>+1 Button</h1>
+    <div id="number">0</div>
+    <button id="plus-one-btn">+1</button>
+
+    <script>
+        // Get the button and number element
+        const plusOneButton = document.getElementById('plus-one-btn');
+        const numberElement = document.getElementById('number');
+        
+        // Add event listener to the button
+        plusOneButton.addEventListener('click', function() {
+            // Get the current number value
+            let currentNumber = parseInt(numberElement.textContent);
+            
+            // Increment the number by 1
+            currentNumber++;
+            
+            // Update the number element with the new value
+            numberElement.textContent = currentNumber;
+        });
+    </script>
+</body>
+</html>
